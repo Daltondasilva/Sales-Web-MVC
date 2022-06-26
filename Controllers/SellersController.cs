@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using SalesWebMVC.Services;
 
 namespace SalesWebMVC.Controllers
 {
     public class SellersController : Controller
     {
-        // GET: /<controller>/
+        private readonly SellerService _sellerService;
+
+        public SellersController(SellerService sellerService)
+        {
+            _sellerService = sellerService;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var list = _sellerService.FindAll();
+            return View(list);
         }
     }
 }
