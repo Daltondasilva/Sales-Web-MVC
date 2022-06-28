@@ -18,6 +18,7 @@
     <None Remove="Models\Enums\" />
     <None Remove="Views\Sellers\" />
     <None Remove="Services\" />
+    <None Remove="Services\Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
@@ -40,5 +41,6 @@
     <Folder Include="Models\Enums\" />
     <Folder Include="Views\Sellers\" />
     <Folder Include="Services\" />
+    <Folder Include="Services\Exceptions\" />
   </ItemGroup>
 </Project>
